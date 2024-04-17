@@ -1,4 +1,4 @@
-const PORT = '1000';
+const PORT = '3000';
 
 const SERVER_PATH = `http://localhost:${PORT}/`;
 const API_KEY = '7qw89er74ty5u61io23p0a';
