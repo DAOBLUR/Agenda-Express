@@ -111,36 +111,36 @@ app.post('/Delete', (request, response) => {
 app.put('/Update', (request, response) => {
     console.log(request.body);
 
-    const { oldTitle, oldDate, oldHour, oldDescription } = request.body[0];
+    const { currentTitle, currentDate, currentHour, currentDescription } = request.body[0];
     const { newTitle, newDate, newHour, newDescription } = request.body[1];
     
-    const oldEventPath = `${AGENDA_PATH}${oldDate}/${oldHour.replace(':', '-')}.txt`;
+    const currentEventPath = `${AGENDA_PATH}${currentDate}/${currentHour.replace(':', '-')}.txt`;
     const newEventPath = `${AGENDA_PATH}${newDate}/${newHour.replace(':', '-')}.txt`;
 
-    if(!oldDate || oldDate === "") return response.json('Error in DATE');
-    if(!oldHour || oldHour === "") return response.json('Error in HOUR');
+    if(!currentDate || currentDate === "") return response.json('Error in DATE');
+    if(!currentHour || currentHour === "") return response.json('Error in HOUR');
 
     if(!newDate || newDate === "") return response.json('Error in DATE');
     if(!newHour || newHour === "") return response.json('Error in HOUR');
 
-    if (!fs.existsSync(oldEventPath)){
+    if (!fs.existsSync(currentEventPath)){
         return response.status(404).send('Event not exists.');
     }
 
-    if(oldEventPath !== newEventPath)
+    if(currentEventPath !== newEventPath)
     {
         if (fs.existsSync(newEventPath)) {
             return response.status(409).json('There is already an event at that HOUR.');
         }
         else
         {
-            fs.unlinkSync(oldEventPath);
+            fs.unlinkSync(currentEventPath);
             fs.writeFileSync(newEventPath, `${newTitle}\n${newDescription}`);
         }
     }
     else
     {
-        fs.writeFileSync(oldEventPath, `${newTitle}\n${newDescription}`);
+        fs.writeFileSync(currentEventPath, `${newTitle}\n${newDescription}`);
     }
     
     response.json('Event updated successfully.');
