@@ -18,7 +18,7 @@ app.use(
 );
 
 //const PORT = '3000';
-const PORT = '8888';
+const PORT = '8000';
 const SERVER_PATH = `http://localhost:${PORT}/`;
 
 app.listen(PORT, () => {
