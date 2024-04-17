@@ -17,13 +17,18 @@ app.use(
     )
 );
 
-app.listen(3000, () => {
-    console.log("Listening in: http://localhost:3000")
+//const PORT = '3000';
+const PORT = '8888';
+const SERVER_PATH = `http://localhost:${PORT}/`;
+
+app.listen(PORT, () => {
+    console.log(`Listening in: ${SERVER_PATH}`)
 });
 
 app.get('/', (request, response) => {
     response.sendFile(path.resolve(__dirname, 'index.html'))
 });
+
 
 const AGENDA_PATH = 'priv/agenda/';
 const API_KEY = '7qw89er74ty5u61io23p0a';
