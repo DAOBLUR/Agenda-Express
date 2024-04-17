@@ -1,5 +1,4 @@
-//const PORT = '3000';
-const PORT = '8000';
+const PORT = '1000';
 
 const SERVER_PATH = `http://localhost:${PORT}/`;
 const API_KEY = '7qw89er74ty5u61io23p0a';
@@ -264,7 +263,7 @@ function Update()
     )
     .then(
         data => {
-            console.log(data);
+            CleanForm();
             GetAllAgenda();
         }
     )
@@ -290,4 +289,3 @@ function CancelUpdate()
 }
 
 GetAllAgenda();
-

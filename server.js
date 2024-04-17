@@ -17,8 +17,8 @@ app.use(
     )
 );
 
-//const PORT = '3000';
-const PORT = '8000';
+
+const PORT = '1000';
 const SERVER_PATH = `http://localhost:${PORT}/`;
 
 app.listen(PORT, () => {
@@ -76,6 +76,9 @@ app.get('/GetAllEvents', (request, response) => {
 app.post('/Create', (request, response) => {
     console.log(request.body);
     const { title, date, hour, description } = request.body;
+
+    if(!date || date === "") return response.json('Error in DATE');
+    if(!hour || hour === "") return response.json('Error in HOUR');
     
     const eventPath = `${AGENDA_PATH}${date}/${hour.replace(':', '-')}.txt`;
 
@@ -113,6 +116,12 @@ app.put('/Update', (request, response) => {
     
     const oldEventPath = `${AGENDA_PATH}${oldDate}/${oldHour.replace(':', '-')}.txt`;
     const newEventPath = `${AGENDA_PATH}${newDate}/${newHour.replace(':', '-')}.txt`;
+
+    if(!oldDate || oldDate === "") return response.json('Error in DATE');
+    if(!oldHour || oldHour === "") return response.json('Error in HOUR');
+
+    if(!newDate || newDate === "") return response.json('Error in DATE');
+    if(!newHour || newHour === "") return response.json('Error in HOUR');
 
     if (!fs.existsSync(oldEventPath)){
         return response.status(404).send('Event not exists.');

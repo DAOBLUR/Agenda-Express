@@ -1,2 +1,0 @@
-Clase de Ingeniería Web
-La clase de llevará a cabo en el laboratorio C.
