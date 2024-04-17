@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#PageTitle {
+  margin: 10px;
+  text-align: center;
+}
+
+#form {
+  margin: 10px;
+}
+#form label {
+  margin: 5px 0px;
+  font-weight: bold;
+}
+#form #createBtn {
+  background-color: #28A745;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  margin: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#form #createBtn:hover {
+  transform: scale(1.05);
+  background-color: #1dd047;
+}
+#form #updateBtn {
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  margin: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#form #updateBtn:hover {
+  transform: scale(1.05);
+  background-color: #009dff;
+}
+#form #cancelBtn {
+  background-color: #FFC107;
+  border: none;
+  color: black;
+  padding: 15px 30px;
+  margin: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#form #cancelBtn:hover {
+  transform: scale(1.05);
+  background-color: #ffee00;
+}
+
+#allEvents .dayContent {
+  border-style: solid;
+  border-width: 1px;
+  margin: 30px 0px;
+  padding: 10px;
+}
+#allEvents .dayContent .event {
+  margin: 10px 0px;
+  padding: 10px;
+}
+#allEvents .dayContent .event h3 {
+  margin: 0px 0px 15px 0px;
+}
+#allEvents .dayContent .event p {
+  margin: 5px 0px;
+}
+#allEvents .dayContent .event .buttons {
+  margin: 10px 0px;
+}
+#allEvents .dayContent .event .buttons .update {
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px 0px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#allEvents .dayContent .event .buttons .update:hover {
+  transform: scale(1.05);
+  background-color: #009dff;
+}
+#allEvents .dayContent .event .buttons .delete {
+  background-color: #de2134;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#allEvents .dayContent .event .buttons .delete:hover {
+  transform: scale(1.05);
+  background-color: #ff0019;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Agenda</title>
+</head>
+<body>
+    <h1 id="PageTitle">Agenda</h1>
+
+    <div id="form">
+        <label for="formTitle">Title:</label>
+        <br><br>
+        <input type="text" id="formTitle" name="formTitle">
+        <br><br>
+
+        <label for="formDate">Date:</label>
+        <br><br>
+        <input type="date" id="formDate" name="formDate"/>
+        <br><br>
+
+        <label for="formHour">Hour:</label>
+        <br><br>
+        <input type="time" id="formHour" name="formHour"/>
+        <br><br>
+
+        <label for="formDescription">Description:</label>
+        <br><br>
+        <textarea id="formDescription" name="formDescription" rows="4" cols="50"></textarea>
+        <br><br>
+        <button type="button" onclick="Create()" id="createBtn">Create</button>
+        <button type="button" onclick="Update()" id="updateBtn" hidden>Update</button>
+        <button type="button" onclick="CancelUpdate()" id="cancelBtn" hidden>Cancel</button>
+    </div>
+
+    <div id="allEvents"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
